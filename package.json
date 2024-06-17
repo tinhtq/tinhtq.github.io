@@ -1,6 +1,6 @@
 {
-  "name": "developer-portfolio",
-  "description": "Portfolio of Abu Said",
+  "name": "my-portfolio",
+  "description": "Portfolio of Tinh",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,7 +27,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
-    "sass": "^1.69.5",
+    "sass": "^1.77.5",
     "tailwindcss": "latest"
   }
 }
