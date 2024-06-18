@@ -6,7 +6,7 @@ module.exports = {
   },
   images: {
     domains: ["res.cloudinary.com", "media.dev.to"],
+    unoptimized: true,
   },
   output: "export",
-  assetPrefix: "/",
 };
