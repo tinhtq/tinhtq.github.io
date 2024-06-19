@@ -25,7 +25,7 @@ export const experiences = [
     title: "DevOps Engineer",
     company: "AgileOps",
     duration: "(Feb 2023 - Sep 2023)",
-    companyLogo: "./png/experience/drimaes.png",
+    companyLogo: "./png/experience/agileops.png",
   },
   {
     id: 5,
