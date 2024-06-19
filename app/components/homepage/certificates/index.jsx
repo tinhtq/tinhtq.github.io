@@ -38,7 +38,7 @@ function Certificates() {
         >
           {certificatesData.map((certificate, id) => (
             <div
-              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 mx-3 sm:mx-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
+              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 mx-24 sm:mx-32 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
               key={id}
             >
               <a
@@ -50,9 +50,9 @@ function Certificates() {
                 <Image
                   src={certificate.image}
                   alt={certificate.name}
-                  width={80}
-                  height={80}
-                  className="h-20 w-auto mb-4"
+                  width={160}
+                  height={160}
+                  className="h-30 w-auto mb-4"
                 />
                 <p className="text-white text-center text-sm sm:text-lg whitespace-nowrap">
                   {certificate.name}
