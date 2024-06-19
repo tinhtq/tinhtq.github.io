@@ -70,7 +70,7 @@ function Experience() {
                         />{" "}
                       </div>
                       <div>
-                        <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                        <p className="text-base sm:text-xl mb-2 font-medium ">
                           {experience.title}
                         </p>
                         <p className="text-sm sm:text-base">
