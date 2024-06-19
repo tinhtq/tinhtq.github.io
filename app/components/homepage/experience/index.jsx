@@ -60,7 +60,10 @@ function Experience() {
                       </p>
                     </div>
                     <div className="flex items-center gap-x-8 px-3 py-5">
-                      <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                      <div
+                        className="text-violet-500  transition-all duration-300 hover:scale-125"
+                        style={{ marginLeft: "15px" }}
+                      >
                         <Image
                           src={experience.companyLogo}
                           width={120}
@@ -69,7 +72,7 @@ function Experience() {
                           className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
                         />{" "}
                       </div>
-                      <div>
+                      <div style={{ marginLeft: "25px" }}>
                         <p className="text-base sm:text-xl mb-2 font-medium ">
                           {experience.title}
                         </p>

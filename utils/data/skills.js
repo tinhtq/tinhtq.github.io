@@ -11,6 +11,7 @@ export const skillsData = [
   "FastApi",
   "Hyperledger Blockchain Network",
   "NestJS",
+  "Bash",
 ];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
