@@ -63,8 +63,8 @@ function Experience() {
                       <div className="text-violet-500  transition-all duration-300 hover:scale-125">
                         <Image
                           src={experience.companyLogo}
-                          width={150}
-                          height={150}
+                          width={120}
+                          height={120}
                           alt="Logo"
                           className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
                         />{" "}
