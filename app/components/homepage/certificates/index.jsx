@@ -50,9 +50,9 @@ function Certificates() {
                 <Image
                   src={certificate.image}
                   alt={certificate.name}
-                  width={160}
-                  height={160}
-                  className="h-30 w-auto mb-4"
+                  width={60}
+                  height={60}
+                  className="h-20 w-auto mb-4"
                 />
                 <p className="text-white text-center text-sm sm:text-lg whitespace-nowrap">
                   {certificate.name}
