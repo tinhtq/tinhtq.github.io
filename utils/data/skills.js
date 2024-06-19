@@ -8,6 +8,9 @@ export const skillsData = [
   "Nginx",
   "Kubernetes",
   "Python",
+  "FastApi",
+  "Hyperledger Blockchain Network",
+  "NestJS",
 ];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

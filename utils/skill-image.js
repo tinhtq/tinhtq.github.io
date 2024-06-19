@@ -73,10 +73,18 @@ import webix from "/public/svg/skills/webix.svg";
 import wolframalpha from "/public/svg/skills/wolframalpha.svg";
 import wordpress from "/public/svg/skills/wordpress.svg";
 import kubernetes from "/public/svg/skills/kubernetes.svg";
-
+import fastapi from "/public/svg/skills/fastapi.svg";
+import hyperledger from "/public/svg/skills/hyperledger-blockchain-network.svg";
+import nestjs from "/public/svg/skills/nestjs.svg";
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
+    case "nestjs":
+      return nestjs;
+    case "hyperledger blockchain network":
+      return hyperledger;
+    case "fastapi":
+      return fastapi;
     case "kubernetes":
       return kubernetes;
     case "gcp":
