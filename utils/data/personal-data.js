@@ -11,8 +11,9 @@ export const personalData = {
   facebook: "https://www.facebook.com/tqt1997/",
   linkedIn: "https://www.linkedin.com/in/tqt1997/",
   stackOverflow: "https://stackoverflow.com/users/25622330/raymond",
-  leetcode: "https://leetcode.com/said3812/",
+  leetcode: "https://leetcode.com/raymond97/",
   devUsername: "tinhtq97",
+  mediumBlog: "https://medium.com/@tinhtq97",
   resume:
     "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing",
 };
