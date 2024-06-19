@@ -14,6 +14,7 @@ export const personalData = {
   leetcode: "https://leetcode.com/raymond97/",
   devUsername: "tinhtq97",
   mediumBlog: "https://medium.com/@tinhtq97",
+  upworkProfile: "https://www.upwork.com/freelancers/~0108648bf0792fe462",
   resume:
     "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing",
 };

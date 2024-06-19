@@ -8,7 +8,8 @@ import { FaMediumM } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
+import { SiLeetcode, SiUpwork } from "react-icons/si";
+import { PiDevToLogo } from "react-icons/pi";
 
 function HeroSection() {
   return (
@@ -65,6 +66,20 @@ function HeroSection() {
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <FaMediumM size={30} />
+            </Link>
+            <Link
+              href={`https://dev.to/${personalData.devUsername}`}
+              target="_blank"
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <PiDevToLogo size={30} />
+            </Link>
+            <Link
+              href={personalData.upworkProfile}
+              target="_blank"
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <SiUpwork size={30} />
             </Link>
           </div>
 
