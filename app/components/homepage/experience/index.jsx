@@ -109,7 +109,6 @@ function Experience() {
           </div>
         </div>
       </div>
-      H. Yến, [20/06/2024 22:58]
       {isOpen && (
         <Popup
           title="Description"
