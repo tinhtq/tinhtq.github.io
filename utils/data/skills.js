@@ -8,7 +8,7 @@ export const skillsData = [
   "Nginx",
   "Kubernetes",
   "Python",
-  "FastApi",
+  "FastAPI",
   "Hyperledger Blockchain Network",
   "NestJS",
   "Bash",

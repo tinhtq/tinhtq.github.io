@@ -5,6 +5,7 @@ export const experiences = [
     company: "SHBFinance",
     duration: "(Jan 2024 - Present)",
     companyLogo: "./png/experience/shbfinance.png",
+    description: "To be continued",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const experiences = [
     company: "Gonovacloud",
     duration: "(Sep 2023 - Present)",
     companyLogo: "./png/experience/gonovacloud.png",
+    description: "To be continued",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const experiences = [
     company: "DRIMAES",
     duration: "(Sep 2023 - Dec 2023)",
     companyLogo: "./png/experience/drimaes.png",
+    description: "To be continued",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const experiences = [
     company: "AgileOps",
     duration: "(Feb 2023 - Sep 2023)",
     companyLogo: "./png/experience/agileops.png",
+    description: "To be continued",
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ export const experiences = [
     company: "Olym3 Labs",
     duration: "(Feb 2021 - Mar 2023)",
     companyLogo: "./png/experience/olym3labs.png",
+    description: "To be continued",
   },
   {
     id: 6,
@@ -40,5 +45,6 @@ export const experiences = [
     company: "VTC Telecom",
     duration: "(Oct 2019 - Jan 2021)",
     companyLogo: "./png/experience/vtctelecom.png",
+    description: "To be continued",
   },
 ];

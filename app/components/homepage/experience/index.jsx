@@ -12,8 +12,11 @@ import Popup from "../../helper/popup";
 
 function Experience() {
   const [isOpen, setIsOpen] = useState(false);
-  const togglePopup = () => {
+  const [description, setDescription] = useState("");
+
+  const togglePopup = (description) => {
     setIsOpen(!isOpen);
+    setDescription(description);
   };
   return (
     <div
@@ -27,7 +30,6 @@ function Experience() {
         height={795}
         className="absolute top-0 -z-10"
       />
-
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
@@ -37,7 +39,6 @@ function Experience() {
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
       </div>
-
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
@@ -94,7 +95,7 @@ function Experience() {
                         <FaEye
                           size="20px"
                           className="z-1"
-                          onClick={togglePopup}
+                          onClick={() => togglePopup(experience.description)}
                         />
                         <span class="absolute top-10 scale-0 rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
                           Detail
@@ -108,11 +109,11 @@ function Experience() {
           </div>
         </div>
       </div>
-
+      H. Yến, [20/06/2024 22:58]
       {isOpen && (
         <Popup
           title="Description"
-          description="Hello"
+          description={description}
           togglePopup={togglePopup}
           isOpen={isOpen}
         />
@@ -120,4 +121,5 @@ function Experience() {
     </div>
   );
 }
+
 export default Experience;
