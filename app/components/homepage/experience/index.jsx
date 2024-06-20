@@ -1,13 +1,20 @@
 // @flow strict
+"use client";
 
+import { useState } from "react";
+import { FaEye } from "react-icons/fa";
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
-import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import experience from "/public/lottie/code.json";
+import Popup from "../../helper/popup";
 
 function Experience() {
+  const [isOpen, setIsOpen] = useState(false);
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div
       id="experience"
@@ -40,11 +47,12 @@ function Experience() {
           </div>
 
           <div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 -z-10">
               {experiences.map((experience) => (
                 <GlowCard
                   key={experience.id}
                   identifier={`experience-${experience.id}`}
+                  isOpen={isOpen}
                 >
                   <div className="p-3 relative">
                     <Image
@@ -59,26 +67,38 @@ function Experience() {
                         {experience.duration}
                       </p>
                     </div>
-                    <div className="flex items-center gap-x-8 px-3 py-5">
-                      <div
-                        className="text-violet-500  transition-all duration-300 hover:scale-125"
-                        style={{ marginLeft: "15px" }}
-                      >
-                        <Image
-                          src={experience.companyLogo}
-                          width={120}
-                          height={120}
-                          alt="Logo"
-                          className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-                        />{" "}
+                    <div className="flex items-center justify-between gap-x-8 px-3 py-5">
+                      <div className="flex items-center gap-x-8">
+                        <div
+                          className="text-violet-500 transition-all duration-300"
+                          style={{ marginLeft: "15px" }}
+                        >
+                          <Image
+                            src={experience.companyLogo}
+                            width={120}
+                            height={120}
+                            alt="Logo"
+                            className="rounded-lg transition-all duration-1000 grayscale"
+                          />{" "}
+                        </div>
+                        <div style={{ marginLeft: "25px" }}>
+                          <p className="text-base sm:text-xl mb-2 font-medium ">
+                            {experience.title}
+                          </p>
+                          <p className="text-sm sm:text-base">
+                            {experience.company}
+                          </p>
+                        </div>
                       </div>
-                      <div style={{ marginLeft: "25px" }}>
-                        <p className="text-base sm:text-xl mb-2 font-medium ">
-                          {experience.title}
-                        </p>
-                        <p className="text-sm sm:text-base">
-                          {experience.company}
-                        </p>
+                      <div class="group relative m-12 flex justify-center">
+                        <FaEye
+                          size="20px"
+                          className="z-1"
+                          onClick={togglePopup}
+                        />
+                        <span class="absolute top-10 scale-0 rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
+                          Detail
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -88,8 +108,16 @@ function Experience() {
           </div>
         </div>
       </div>
+
+      {isOpen && (
+        <Popup
+          title="Description"
+          description="Hello"
+          togglePopup={togglePopup}
+          isOpen={isOpen}
+        />
+      )}
     </div>
   );
 }
-
 export default Experience;

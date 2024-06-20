@@ -41,11 +41,12 @@ function Certificates() {
               className="w-full h-fit flex flex-col items-center justify-center transition-all duration-500 mx-24 sm:mx-32 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
               key={id}
             >
-                  <a 
-                    href={certificate.link}
+              <a
+                href={certificate.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-full w-3/4 rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
+                className="h-full w-3/4 rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500"
+              >
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-2/4">
                     <div className="h-[20px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
