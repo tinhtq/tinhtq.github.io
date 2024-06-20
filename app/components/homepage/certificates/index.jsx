@@ -38,25 +38,33 @@ function Certificates() {
         >
           {certificatesData.map((certificate, id) => (
             <div
-              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 mx-24 sm:mx-32 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
+              className="w-full h-fit flex flex-col items-center justify-center transition-all duration-500 mx-24 sm:mx-32 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
               key={id}
             >
-              <a
-                href={certificate.link}
+                  <a 
+                    href={certificate.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500 flex flex-col items-center justify-center p-6"
-              >
-                <Image
-                  src={certificate.image}
-                  alt={certificate.name}
-                  width={60}
-                  height={60}
-                  className="h-20 w-auto mb-4"
-                />
-                <p className="text-white text-center text-sm sm:text-lg whitespace-nowrap">
-                  {certificate.name}
-                </p>
+                className="h-full w-3/4 rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
+                <div className="flex -translate-y-[1px] justify-center">
+                  <div className="w-2/4">
+                    <div className="h-[20px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
+                  </div>
+                </div>
+                <div className="flex flex-col items-center justify-center gap-3 p-6">
+                  <div className="h-8 sm:h-10">
+                    <Image
+                      src={certificate.image}
+                      alt={certificate.name}
+                      width={40}
+                      height={40}
+                      className="h-full w-auto rounded-lg"
+                    />
+                  </div>
+                  <p className="text-white text-lg text-center">
+                    {certificate.name}
+                  </p>
+                </div>
               </a>
             </div>
           ))}
