@@ -25,8 +25,8 @@ export const personalData = {
   stackOverflow: "https://stackoverflow.com/users/25622330/raymond",
   leetcode: "https://leetcode.com/raymond97/",
   devUsername: "tinhtq97",
-  mediumBlog: "https://medium.com/@tinhtq97",
+  mediumUsername: "@tinhtq97",
   upworkProfile: "https://www.upwork.com/freelancers/~0108648bf0792fe462",
   resume:
-    "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing",
+    "https://drive.google.com/file/d/1J5xR2Thdf8G31GwtVqkZXVS9PnlcZj7X/view?usp=sharing",
 };
