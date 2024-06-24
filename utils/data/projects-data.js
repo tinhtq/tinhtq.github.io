@@ -9,7 +9,7 @@ export const projectsData = [
     name: "Architecture Diagram Generator",
     description:
       "My team and I built a web application that generates the architecture diagram of a software application from the input. It will create the CloudFormation template and the visualization for this architecture. ",
-    tools: ["OpenSearch", "AWS Bedrock", "Streamlit", "FastAPI"],
+    tools: ["OpenSearch", "AWS Bedrock", "Streamlit", "FastAPI", "S3"],
     role: "Backend Developer",
     code: "",
     demo: "",
