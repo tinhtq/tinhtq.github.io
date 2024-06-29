@@ -85,8 +85,8 @@ function ProjectCard({ project }) {
       </div>
       {project.image !== null && isOpen && (
         <ProjectPopup
-          title="Description"
-          description={description}
+          title="Architecture"
+          image={project.image}
           togglePopup={togglePopup}
           isOpen={isOpen}
         />

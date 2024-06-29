@@ -1,44 +1,34 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
+import Image from "next/image";
 
-const ProjectPopup = ({ title, description, isOpen, togglePopup }) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    // Clean up function
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
+const ProjectPopup = ({ title, image, togglePopup, isOpen }) => {
   return (
-    <div className="flex justify-center items-center h-screen z-99">
-      {isOpen && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center">
-          <div className="bg-[#10132A] p-8 rounded shadow-lg max-w-fit min-w-1/4 mx-10">
-            <h2 className="text-lg font-bold mb-4 max-w-full truncate text-[#232134]">
-              {title}
-            </h2>
-            <p className="max-w-full overflow-hidden overflow-ellipsis text-black">
-              {description.split("\n").map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
-            </p>
-            <button
-              className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              onClick={togglePopup}
-            >
-              Close
-            </button>
-          </div>
+    <div
+      className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 ${
+        isOpen ? "" : "hidden"
+      }`}
+    >
+      <div className="bg-[#0D1324] p-6 rounded-lg max-w-4xl">
+        <div className="flex justify-between items-center">
+          <h2 className="text-xl font-bold text-[#3DF2B3]">{title}</h2>
+          <button
+            onClick={togglePopup}
+            className="text-gray-300 hover:text-[#3DF2B3]"
+          >
+            Close
+          </button>
         </div>
-      )}
+        <div className="my-4">
+          <Image
+            src={image}
+            alt="Project Image"
+            layout="responsive"
+            width={1200}
+            height={800}
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
     </div>
   );
 };
