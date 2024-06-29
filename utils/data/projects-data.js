@@ -13,7 +13,7 @@ export const projectsData = [
     role: "Backend Developer",
     code: "",
     demo: "",
-    image: crefin,
+    image: null,
   },
   {
     id: 2,
