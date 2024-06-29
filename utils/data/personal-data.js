@@ -28,5 +28,5 @@ export const personalData = {
   mediumUsername: "@tinhtq97",
   upworkProfile: "https://www.upwork.com/freelancers/~0108648bf0792fe462",
   resume:
-    "https://drive.google.com/file/d/1J5xR2Thdf8G31GwtVqkZXVS9PnlcZj7X/view?usp=sharing",
+    "https://drive.google.com/file/d/1AeJAMAemt2jDbK-hkfkmo_RVItWUs_xI/view?usp=sharing",
 };
