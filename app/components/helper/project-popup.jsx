@@ -13,7 +13,7 @@ const ProjectPopup = ({ title, image, togglePopup, isOpen }) => {
           <h2 className="text-xl font-bold text-[#3DF2B3]">{title}</h2>
           <button
             onClick={togglePopup}
-            className="text-gray-300 hover:text-[#3DF2B3]"
+            className="text-[#3DF2B3] hover:text-red-500 transition-colors duration-300"
           >
             Close
           </button>
