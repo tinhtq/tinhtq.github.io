@@ -1,17 +1,28 @@
 "use client";
 
-// @flow strict
-
 import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ProjectPopup from "../../helper/project-popup";
 
 function ProjectCard({ project }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [description, setDescription] = useState("");
+  const [currentImage, setCurrentImage] = useState("");
 
-  const togglePopup = (description) => {
+  const togglePopup = (image) => {
     setIsOpen(!isOpen);
-    setDescription(description);
+    setCurrentImage(image);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -72,10 +83,10 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">{`};`}</span>
           </div>
           <div className="group relative m-12 flex justify-center">
-            {project.image !== null && project.image !== undefined && (
+            {project.image && project.image.length > 0 && (
               <div
                 className="cursor-pointer bg-gray-800 p-2 text-xs text-white hover:bg-gray-700 rounded"
-                onClick={() => togglePopup(project.image)}
+                onClick={() => togglePopup(project.image[0])}
               >
                 Click here to view the architecture
               </div>
@@ -83,12 +94,13 @@ function ProjectCard({ project }) {
           </div>
         </code>
       </div>
-      {project.image !== null && isOpen && (
+      {project.image && project.image.length > 0 && isOpen && (
         <ProjectPopup
           title="Architecture"
-          image={project.image}
+          images={project.image}
           togglePopup={togglePopup}
           isOpen={isOpen}
+          settings={settings}
         />
       )}
     </div>

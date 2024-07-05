@@ -1,49 +1,38 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Slider from "react-slick";
 import Image from "next/image";
 
-const ProjectPopup = ({ title, image, togglePopup, isOpen }) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    // Clean up function
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
+function ProjectPopup({ title, images, togglePopup, isOpen, settings }) {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 ${
-        isOpen ? "" : "hidden"
-      }`}
-      style={{ zIndex: 50 }}
+      className={`fixed inset-0 bg-black bg-opacity-50 z-10 ${
+        isOpen ? "flex" : "hidden"
+      } items-center justify-center`}
     >
-      <div className="bg-[#0D1324] p-6 rounded-lg max-w-4xl">
-        <div className="flex justify-between items-center">
-          <h2 className="text-xl font-bold text-[#3DF2B3]">{title}</h2>
-          <button
-            onClick={togglePopup}
-            className="text-[#3DF2B3] hover:text-red-500 transition-colors duration-300"
-          >
-            Close
-          </button>
-        </div>
-        <div className="my-4">
-          <Image
-            src={image}
-            alt="Project Image"
-            layout="responsive"
-            width={1200}
-            height={800}
-            className="rounded-lg shadow-lg"
-          />
-        </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+        <h2 className="text-2xl font-bold mb-4">{title}</h2>
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index} className="relative w-full h-64">
+              <Image
+                src={image}
+                alt={`Project architecture ${index}`}
+                layout="fill"
+                objectFit="contain"
+                className="w-full h-auto"
+              />
+            </div>
+          ))}
+        </Slider>
+        <button
+          className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+          onClick={() => togglePopup("")}
+        >
+          Close
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default ProjectPopup;

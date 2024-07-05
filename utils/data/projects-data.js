@@ -24,7 +24,7 @@ export const projectsData = [
     role: "Backend Developer",
     code: "",
     demo: "",
-    image: crefin,
+    image: [crefin, realEstate],
   },
 ];
 
