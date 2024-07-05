@@ -5,7 +5,7 @@ import Image from "next/image";
 function ProjectPopup({ title, images, togglePopup, isOpen, settings }) {
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-50 z-10 ${
+      className={`fixed inset-0 bg-black bg-opacity-50 z--10 ${
         isOpen ? "flex" : "hidden"
       } items-center justify-center`}
     >
