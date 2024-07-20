@@ -5,7 +5,11 @@ export const experiences = [
     company: "SHBFinance",
     duration: "(Jan 2024 - Present)",
     companyLogo: "./png/experience/shbfinance.png",
-    description: "To be continued",
+    description: `Techstack: AWS, Vault, OpenShift, Kubernetes, Ansible, Python, Bash, DevSecOps, GitLab CI, Grafana, Prometheus, Loki, ELK, Spring Boot, NodeJs, OpenTelemetry, Kafka, ArgoCD\n
+      Maintain and deploy applications with Helm Charts, centralize monitoring with Grafana and Prometheus, logging with Loki and ELK stack, and tracing with OpenTelemetry and Jaeger on OpenShift and Kubernetes.\n
+      Implement the DevSecOps, and GitOps pipeline with GitLab CI based on business.\n
+      Innovatively utilized Python, and Javascript to develop Lambda Functions, integrating AWS SDK or executing various functionalities.
+      `,
   },
   {
     id: 2,
