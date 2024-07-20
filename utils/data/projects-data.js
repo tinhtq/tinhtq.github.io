@@ -1,7 +1,5 @@
-import ayla from "/public/image/ayla.jpg";
-import crefin from "/public/image/crefin.jpg";
-import realEstate from "/public/image/real-estate.jpg";
-import travel from "/public/image/travel.jpg";
+import genAiArchitect from "/public/image/project/genAI-Architecture.png";
+import genAiWorkflow from "/public/image/project/genAi-Workflow.png";
 
 export const projectsData = [
   {
@@ -13,7 +11,7 @@ export const projectsData = [
     role: "Backend Developer",
     code: "",
     demo: "",
-    image: null,
+    image: [genAiArchitect, genAiWorkflow],
   },
   {
     id: 2,
@@ -24,7 +22,7 @@ export const projectsData = [
     role: "Backend Developer",
     code: "",
     demo: "",
-    image: [crefin, realEstate],
+    image: null,
   },
 ];
 
