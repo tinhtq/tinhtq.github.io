@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectPopup from "../../helper/project-popup";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project,idParent }) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
 
@@ -100,6 +100,7 @@ function ProjectCard({ project }) {
           togglePopup={togglePopup}
           isOpen={isOpen}
           settings={settings}
+          idParent={idParent}
         />
       )}
     </div>

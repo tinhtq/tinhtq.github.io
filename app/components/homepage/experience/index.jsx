@@ -91,13 +91,13 @@ function Experience() {
                           </p>
                         </div>
                       </div>
-                      <div class="group relative m-12 flex justify-center">
+                      <div className="group relative m-12 flex justify-center">
                         <FaEye
                           size="20px"
                           className="z-1"
                           onClick={() => togglePopup(experience.description)}
                         />
-                        <span class="absolute top-10 scale-0 rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
+                        <span className="absolute top-10 scale-0 rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
                           Detail
                         </span>
                       </div>

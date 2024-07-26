@@ -4,7 +4,14 @@ import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
-function ProjectPopup({ title, images, togglePopup, isOpen, settings }) {
+function ProjectPopup({
+  title,
+  images,
+  togglePopup,
+  isOpen,
+  settings,
+  idParent,
+}) {
   const popupRef = useRef(null);
 
   const handleClickOutside = useCallback(
@@ -17,12 +24,17 @@ function ProjectPopup({ title, images, togglePopup, isOpen, settings }) {
   );
 
   useEffect(() => {
+    const parent = document.getElementById(idParent);
+
     if (isOpen) {
+      parent.style.zIndex = "1";
       document.addEventListener("mousedown", handleClickOutside);
     } else {
+      parent.style.zIndex = "auto";
       document.removeEventListener("mousedown", handleClickOutside);
     }
     return () => {
+      parent.style.zIndex = "auto";
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen, handleClickOutside]);
